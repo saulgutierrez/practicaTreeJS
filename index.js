@@ -8,7 +8,7 @@
  // sets renderer background color
  renderer.setClearColor("#000")
  document.body.appendChild( renderer.domElement )
- camera.position.z = 5
+ camera.position.z = 10
  
  // resize canvas on resize window
  window.addEventListener( 'resize', () => {
@@ -45,10 +45,10 @@
  
  function animate() {
      requestAnimationFrame( animate )
-     cube.rotation.x += 0.04;
-     cube.rotation.y += 0.04;
-     wireframeCube.rotation.x -= 0.01;
-     wireframeCube.rotation.y -= 0.01;
+     cube.rotation.x -= 0.09;
+     cube.rotation.y -= 0.09;
+     wireframeCube.rotation.x += 0.01;
+     wireframeCube.rotation.y += 0.01;
      renderer.render( scene, camera )
  }
  animate()
